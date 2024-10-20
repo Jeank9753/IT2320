@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      // 1. Create a class called Student
+      class Student {
+          constructor(name, major, gpa, classesTaken) {
+              this.name = 'Jean D King';
+              this.major = 'Programming and Development';
+              this.gpa = '3.6';
+              this.classesTaken = classesTaken;
+          }
+
+          displayProperties() {
+              document.writeln('Name: ' + this.name + '<br>');
+              document.writeln('Major: ' + this.major + '<br>');
+              document.writeln('GPA: ' + this.gpa + '<br>');
+              document.writeln('Classes Taken: ' + this.classesTaken.join(', ') + '<br>');
+          }
+      }
+
+      // Create an object with type Student
+      const student = new Student("Your Name", "Your Major", 3.0, ["IT-1025", "IT-2310", "IT-1050"]);
+      student.displayProperties();
+
+      // 2. Create an object called Course
+     let Course = {
+          courseId: "IT-2320",
+          title: "IT-2320",
+          crsDesc: "Interactive Internet Programming",
+          creditHrs: "4",
+          displayCourse() {
+              // using Object.values() 
+              Object.values(this).forEach(value => {
+                  document.writeln(value + '<br>');
+              });
+          }
+      };
+
+      // displayinh course properties
+      Course.displayCourse();
+
+      // 3. creating  planet
+      const planet = {
+          name: "Mercury",
+          diameterMiles: 3031.9
+      };
+
+      // adding  millMilesFromEarth
+      planet.millMilesFromEarth = 48;
+
+      // dsiplaying propertues
+      document.writeln('Planet Name: ' + planet.name + '<br>');
+      document.writeln('Diameter (miles): ' + planet.diameterMiles + '<br>');
+      document.writeln('Miles from Earth: ' + planet.millMilesFromEarth + '<br>');
+
+      // 4. creating  a set called favoriteLanguages
+  let favoriteLanguages = new Set(["JavaScript", "Python", "Swift", "Dart"]);
+
+      // dsiplaying all favoriteLanguages
+      for (let language of favoriteLanguages) {
+          console.log(language);
+      }
+
+      // 5. Creating  a map called creditHrs
+      const creditHrs = new Map([
+          ["IT-1025", 3],
+          ["IT-1050", 3],
+          ["IT-2310", 3],
+          ["IT-2320", 4],
+          ["IT-2030", 4],
+          ["IT-2351", 4],
+          ["IT-2650", 4]
+      ]);
+
+      // Getting credit hours for IT-2030
+      const it2030Credits = creditHrs.get("IT-2030");
+      console.log('Credit hours for IT-2030: ' + it2030Credits);
+
+      // display credit hours
+      for (let [course, hours] of creditHrs) {
+          console.log(`Course: ${course}, Credit Hours: ${hours}`);
+      }
+
+    </script>
+  </body>
+</html>
