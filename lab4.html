@@ -2,7 +2,7 @@
 <html>
   <body>
     <script>
-      // 1. Create a class called Student
+      // 1. Create student
       class Student {
           constructor(name, major, gpa, classesTaken) {
               this.name = 'Jean D King';
@@ -19,12 +19,12 @@
           }
       }
 
-      // Create an object with type Student
+      // Creating type Student
       const student = new Student("Your Name", "Your Major", 3.0, ["IT-1025", "IT-2310", "IT-1050"]);
       student.displayProperties();
 
-      // 2. Create an object called Course
-     let Course = {
+      // 2. Create Course Object
+      let Course = {
           courseId: "IT-2320",
           title: "IT-2320",
           crsDesc: "Interactive Internet Programming",
@@ -62,7 +62,7 @@
           console.log(language);
       }
 
-      // 5. Creating  a map called creditHrs
+      // 5. Creating  a map
       const creditHrs = new Map([
           ["IT-1025", 3],
           ["IT-1050", 3],
@@ -77,7 +77,7 @@
       const it2030Credits = creditHrs.get("IT-2030");
       console.log('Credit hours for IT-2030: ' + it2030Credits);
 
-      // display credit hours
+      // displaying credit hours
       for (let [course, hours] of creditHrs) {
           console.log(`Course: ${course}, Credit Hours: ${hours}`);
       }
